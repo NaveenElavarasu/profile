@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Frijole|Nosifer|Permanent+Marker|Tenali+Ramakrishna" rel="stylesheet">
+    <style>
+        #home {
+            background-image: url(img/bg1.jpg);
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #home h1 {
+            font-family: 'Nosifer', cursive;
+            font-size: 65px;
+        }
+        /*
+        font-family: 'Permanent Marker',
+        cursive;
+        font-family: 'Dancing Script',
+        cursive;
+        font-family: 'Frijole',
+        cursive;
+        font-family: 'Nosifer',
+        cursive;
+        
+        */
+        
+        #hhome {
+            padding: 20px;
+            padding-top: 200px;
+            padding-bottom: 300px;
+            font-size: 150px;
+        }
+        
+        #about {
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+            padding: 20px;
+        }
+        
+        .nav {
+            background-color: transparent;
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+        }
+        
+        .nav-item a {
+            color: white;
+        }
+        
+        .nav-item a:hover {
+            color: red;
+            background-color: red;
+            border-bottom: 2px;
+        }
+        
+        #review {
+            background-image: url(img/bg2.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        #review h2 {
+            color: white;
+            font-family: 'Frijole', cursive;
+            padding: 25px;
+        }
+        
+        .thumbnail {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 15px;
+        }
+        
+        .thumbnail img {
+            border-radius: 50%;
+        }
+        
+        .thumbnail p {
+            color: whitesmoke;
+            font-family: 'Permanent Marker', cursive;
+            padding: 20px;
+            ">
+
+        }
+        
+        .thumbnail h3 {
+            color: white;
+            font-family: 'Nosifer', cursive;
+        }
+        
+        #menu {
+            padding: 50px;
+            font-size: 40px;
+            color: chocolate;
+            font-family: 'Permanent Marker', cursive;
+            padding: 20px;
+        }
+        
+        #contact h3 {
+            padding: 50px;
+            font-size: 40px;
+            font-family: 'Permanent Marker', cursive;
+            padding: 20px;
+            ">
+
+        }
+        
+        #contact {
+            padding: 40px;
+            font-size: 40px;
+            font-family: 'Tenali Ramakrishna', sans-serif;
+            padding: 20px;
+        }
+        
+        #cato {
+            padding: 5px;
+        }
+        
+        #menu img {
+            width: 450px;
+            ;
+            height: 250px;
+        }
+        
+        #menu h3 {
+            padding: 20px;
+            font-size: 40px;
+        }
+        /*---nav----*/
+        /* The Overlay (background) */
+        
+        .overlayy {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */
+            height: 100%;
+            width: 0;
+            position: fixed;
+            /* Stay in place */
+            z-index: 2;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            /* Black fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/opacity */
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            transition: 0.5s;
+            /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        }
+        /* Position the content inside the overlay */
+        
+        .overlayy-content {
+            position: relative;
+            top: 25%;
+            /* 25% from the top */
+            width: 100%;
+            /* 100% width */
+            text-align: center;
+            /* Centered text/links */
+            margin-top: 30px;
+            /* 30px top margin to avoid conflict with the close button on smaller screens */
+        }
+        /* The navigation links inside the overlay */
+        
+        .overlayy a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            /* Display block instead of inline */
+            transition: 0.3s;
+            /* Transition effects on hover (color) */
+        }
+        /* When you mouse over the navigation links, change their color */
+        
+        .overlayy a:hover,
+        .overlayy a:focus {
+            color: #f1f1f1;
+        }
+        /* Position the close button (top right corner) */
+        
+        .overlayy .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+        /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+        
+        @media screen and (max-height: 450px) {
+            .overlayy a {
+                font-size: 20px
+            }
+            .overlayy .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+        
+        span {}
+        
+        #icon {
+            position: fixed;
+            font-size: 35px;
+            padding-top: 30px;
+            right: 35px;
+            z-index: 1;
+            color: #ff6127;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(128, 128, 128, 0.54);
+        }
+        
+        #cato:hover .overlay {
+            opacity: 1;
+        }
+        
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <div class="container-fluid" id="home">
+        <!--------- <div class="collapse navbar-collapse navbar-static-top" id="navbarSupportedContent">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>---->
+        <!-- The overlay -->
+        <div id="myNav" class="overlayy">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlayy-content">
+                <a href="#">About</a>
+                <a href="#">Reviews</a>
+                <a href="#">Menu</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span class=" pull-right glyphicon glyphicon-th" onclick="openNav()" id="icon"></span>
+
+        <script>
+            /* Open when someone clicks on the span element */
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            /* Close when someone clicks on the "x" symbol inside the overlay */
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+
+        </script>
+
+
+
+
+
+        <div class="container" id="hhome">
+            <h1>Hot Cafe</h1>
+            <p class="lead" style="padding:20px;"> We beleive "hot" is Seventh taste...</p>
+        </div>
+
+
+    </div>
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h3>About us</h3>
+                By day, Revelations is a cosy coffee shop where friends meet to share coffee, cakes and light meals. At night, it is transformed into a vibey eatery.<br> It is the meeting place in Grahamstown for family, friends, business associates and couples – in short, a place for everyone from early morning breakfast to drinks late at night. With free Wi-Fi, Revelations is also a favourite temporary study or work venue. Revelations is truly the place “Where it all comes together. “If you’re looking for the perfect spot to host your next birthday party or event, the shaded courtyard is available for hire (catering options are also available.)
+            </div>
+            <div class="col-md-6 hidden-xs-6">
+                <img class="img-responsive" src="img/about.jpg">
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid" id="review">
+        <h2 class="text-center">What our customers Say?</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="img/lotte-linde---profile-photo.png" alt="...">
+                        <div class="caption text-center">
+                            <h3>Hot Coffee</h3>
+                            <p style="font-family: 'Permanent Marker',
+        cursive;padding:20px;">" If you’re looking for the perfect spot to host your next birthday party or event , the shaded courtyard is available for hire " </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="img/lotte-linde---profile-photo.png" alt="...">
+                        <div class="caption text-center">
+                            <h3>Hot Coffee</h3>
+                            <p>" If you’re looking for the perfect spot to host your next birthday party or event , the shaded courtyard is available for hire " </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="img/lotte-linde---profile-photo.png" alt="...">
+                        <div class="caption text-center">
+                            <h3>Hot Coffee</h3>
+                            <p style="font-family: 'Permanent Marker',
+        cursive;padding:20px;">" If you’re looking for the perfect spot to host your next birthday party or event , the shaded courtyard is available for hire " </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="img/lotte-linde---profile-photo.png" alt="...">
+                        <div class="caption text-center">
+                            <h3>Hot Coffee</h3>
+                            <p style="font-family: 'Permanent Marker',
+        cursive;padding:20px;">" If you’re looking for the perfect spot to host your next birthday party or event , the shaded courtyard is available for hire " </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="img/lotte-linde---profile-photo.png" alt="...">
+                        <div class="caption text-center">
+                            <h3>Hot Coffee</h3>
+                            <p>" If you’re looking for the perfect spot to host your next birthday party or event , the shaded courtyard is available for hire " </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="img/lotte-linde---profile-photo.png" alt="...">
+                        <div class="caption text-center">
+                            <h3>Hot Coffee</h3>
+                            <p style="font-family: 'Permanent Marker',
+        cursive;padding:20px;">" If you’re looking for the perfect spot to host your next birthday party or event , the shaded courtyard is available for hire " </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid text-center" id="menu">
+        <h3>Menu</h3>
+        <div class="row">
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g0.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+
+                <img class="img-responsive" src="img/g5.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g4.png" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g3.png" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="cato">
+
+                <img class="img-responsive" src="img/g2.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g1.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g6.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g7.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g4.png" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g9.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g12.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+            <div class="col-md-3" id="cato">
+                <img class="img-responsive" src="img/g12.jpg" alt="...">
+                <div class="overlay">
+                    <div class="text">"Hot Chocolate"</div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="container-fluid" id="contact" style=" padding:50px;">
+        <h3 class="text-center">Contact</h3>
+        <div class="row">
+
+            <div class="col-md-6" id="map" style="width:500px;height:300px;background:yellow" style=" padding:30px;">
+
+
+                <script>
+                    function myMap() {
+                        var mapCanvas = document.getElementById("map");
+                        var mapOptions = {
+                            center: new google.maps.LatLng(51.5, -0.2),
+                            zoom: 10
+                        };
+                        var map = new google.maps.Map(mapCanvas, mapOptions);
+                    }
+
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 text-center" style=" padding:50px;">
+                        <p class="lead"><strong>Address:</strong><br> Mega Mart, Arcot Road, Valasaravakkam, Chennai, Tamil Nadu 600087</p>
+                    </div>
+                    <div class="col-md-6 text-center" style=" padding:60px;">
+                        <p class="lead"><strong>Ping</strong><br> Phone: 093457 09641,<br> Email: hotcafe@email.com</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="overlay"></div>
+
+
+
+
+    </div>
+<div class="container-fluid text-center" style="padding:15px;">
+    
+    <p>Made with love,Copyright@2017</p>
+    </div>
+    <!-- 
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

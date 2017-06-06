@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+
+
+
+#menu-1 .mbr-brand__name {
+  font-size: 16px;
+}
+#menu-1.mbr-navbar--stuck .mbr-navbar__section {
+  background: #ffffff;
+}
+#menu-1 .mbr-navbar__hamburger {
+  color: #27aae0;
+}
+#menu-1 .mbr-brand__name a {
+  font-family: 'Indie Flower', cursive;
+  font-size: 36px;
+}
+#header1-0 P {
+  color: #efefef;
+  text-align: left;
+}
+#header1-0 H1 {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+}
+#content5-2 .mbr-header .mbr-header__text {
+  text-align: center;
+  color: #27aae0;
+}
+#content5-2 .mbr-header .mbr-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+#content5-2 .mbr-article {
+  color: #868383;
+  text-align: center;
+}
+#content5-2 .mbr-article P {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+#header3-g H3 {
+  text-align: center;
+  color: #27aae0;
+}
+#header3-k H3 {
+  text-align: center;
+  color: #27aae0;
+}
+#testimonials1-7 .mbr-reviews__text P {
+  text-align: center;
+  font-size: 15px;
+}
+#testimonials1-7 .mbr-reviews__author-name {
+  color: #ffffff;
+  font-size: 20px;
+}
+#testimonials1-7 .mbr-section__header {
+  color: #ffffff;
+}
+#features1-8 P {
+  text-align: center;
+}
+#features1-8 .mbr-section-title .mbr-header__text {
+  color: #27aae0;
+}
+#header3-f H3 {
+  text-align: center;
+  color: #27aae0;
+}
+#social-buttons2-6 .mbr-header__text {
+  font-family: 'Indie Flower', cursive;
+  color: #27aae0;
+}
+#contacts3-5 UL {
+  color: #ffffff;
+  font-size: 15px;
+  text-align: left;
+}
+#contacts3-5 P {
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+}
+#footer1-4 P {
+  text-align: center;
+  color: #9c9c9c;
+}
